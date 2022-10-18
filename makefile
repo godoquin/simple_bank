@@ -9,7 +9,7 @@ migrateup:
 migratedown:
 	migrate -path db/migration/ -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" -verbose down
 sqlc:
-	/home/fquintero/sqlc/sqlc generate
+	sqlc generate
 test:
 	go test -v -cover ./...
 
